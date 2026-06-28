@@ -710,3 +710,17 @@ footer{
         padding:5px 10px
     }
 }
+// Define base and accent colors
+$base-color: #E8AFC7;          // blush pink
+$base-color-hover: #D98BAF;    // darker pink
+
+// Define background colors
+$background: #FFFDF8;          // warm white
+$background-alt: #FFF4D6;      // pastel yellow
+
+// Define border colors
+$border: #F0D9C7;
+
+// Define text colors
+$heading: #5C4A5D;             // deep mauve
+$text: #7A6878;                // soft gray-purple
