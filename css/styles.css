@@ -710,17 +710,26 @@ footer{
         padding:5px 10px
     }
 }
-// Define base and accent colors
-$base-color: #E8AFC7;          // blush pink
-$base-color-hover: #D98BAF;    // darker pink
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-// Define background colors
-$background: #FFFDF8;          // warm white
-$background-alt: #FFF4D6;      // pastel yellow
+.project-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+    transition: transform .2s ease;
+}
 
-// Define border colors
-$border: #F0D9C7;
+.project-card:hover {
+    transform: translateY(-5px);
+}
 
-// Define text colors
-$heading: #5C4A5D;             // deep mauve
-$text: #7A6878;                // soft gray-purple
+.project-card h3 {
+    margin-top: 0;
+}
