@@ -1,19 +1,18 @@
 
 // Define base and accent colors
-$base-color: #3498db;
-$base-color-hover: darken($base-color, 10%);
+$base-color: #E8AFC7;          // blush pink
+$base-color-hover: #D98BAF;    // darker pink
 
 // Define background colors
-$background: #fff;
-$background-alt: #f2f2f5;
+$background: #FFFDF8;          // warm white
+$background-alt: #FFF4D6;      // pastel yellow
 
 // Define border colors
-$border: #dcd9d9;
+$border: #F0D9C7;
 
 // Define text colors
-$heading: #374054;
-$text: #74808a;
-
+$heading: #5C4A5D;             // deep mauve
+$text: #7A6878;                // soft gray-purple
 /*
     ---------------------
     ----- 2. Mixins -----
@@ -359,7 +358,7 @@ footer {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba($base-color-hover, 0.8);
+    background: rgba(217, 139, 175, 0.75);
     z-index: 1;
 }
 
@@ -964,4 +963,106 @@ footer {
         }
     }
 
+}
+/* =====================================
+   Custom Pink + Yellow Theme
+   ===================================== */
+
+#lead-overlay {
+    background: rgba(217, 139, 175, 0.75);
+}
+
+header ul {
+    background: rgba(255, 253, 248, 0.95);
+}
+
+header a:hover {
+    background: #FFF4D6;
+}
+
+.heading:after {
+    background: #E8AFC7;
+}
+
+.education-block,
+.vtimeline-content,
+.project {
+    background: #FFFDFB;
+    border: 2px solid #F6D7E5;
+}
+
+.project {
+    border-radius: 12px;
+}
+
+#skills li {
+    background: #FFE7F1;
+    border: 1px solid #F6C8DD;
+    border-radius: 20px;
+    color: #5C4A5D;
+}
+
+#contact {
+    background: linear-gradient(
+        135deg,
+        #E8AFC7 0%,
+        #F7C8A5 50%,
+        #FFF1B8 100%
+    );
+}
+
+footer {
+    background: #FFF4D6;
+}
+
+.profile-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #FFF4D6;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: 25px;
+}
+
+#about {
+    background: #FFFDF8;
+}
+
+#education {
+    background: #FFF8EC;
+}
+
+#experience {
+    background: #FFFDF8;
+}
+
+#projects {
+    background: #FFF8EC;
+}
+
+#skills {
+    background: #FFFDF8;
+}
+
+#mobile-menu-open,
+#mobile-menu-close {
+    color: #D98BAF;
+}
+
+.vtimeline-icon {
+    background: #E8AFC7;
+}
+
+#experience-timeline:before,
+#experience-timeline:after {
+    background: #E8AFC7;
+}
+
+a {
+    color: #D98BAF;
+}
+
+a:hover {
+    color: #C46E98;
 }
