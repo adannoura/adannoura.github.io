@@ -66,14 +66,13 @@ section,
 #lead {
     position: relative;
     min-height: 10vh;
-    padding: 60px 15px;
-    background: url(../images/lead-bg.jpg);
+    padding: 50px 15px;
     background-size: cover;
     overflow: hidden;
 }
 
 #lead-overlay {
-    position: absolute;
+    position: relative;
     inset: 0;
     background: rgba(244,166,184,0.80);
 }
@@ -85,7 +84,7 @@ section,
 }
 
 #lead-content h1 {
-    font-size: 3em;   /* reduced from 5em */
+    font-size: 3em;  
     color: #fff;
     font-weight: 900;
     text-transform: uppercase;
