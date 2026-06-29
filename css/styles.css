@@ -124,7 +124,7 @@ section,
 }
 
 .project-card {
-    background: #FFFDFB;
+    background: #FFFDF9;
     border: 1px solid #F6D7E5;
     border-radius: 12px;
     padding: 20px;
@@ -203,7 +203,7 @@ body{
 }
 body.active{overflow:hidden;z-index:-1}.no-js 
 #experience-timeline>div{
-    background:#fff;
+    background:#FFFDF9;
     padding:10px;
     margin-bottom:10px;
     border:1px solid #dcd9d9
