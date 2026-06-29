@@ -38,9 +38,6 @@ html {
 
     transition: transform 0.3s ease;
 }
-.side-nav.show {
-    transform: translate(0, -50%);
-}
 
 .side-nav a {
     color: #C86C8B;
