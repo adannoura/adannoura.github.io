@@ -15,8 +15,14 @@ body {
 }
 
 /* smooth scroll offset */
-section {
-    scroll-margin-top: 80px;
+#lead,
+#about,
+#experience,
+#education,
+#project,
+#skills,
+#contact {
+    scroll-margin-top: 90px;
 }
 
 /* =========================
