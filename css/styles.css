@@ -271,18 +271,116 @@ section {
 }
 
 /* =========================
-   RESPONSIVE
+   MOBILE / TABLET
 ========================= */
 @media (max-width: 768px) {
+
     body {
         padding-left: 0;
+        font-size: 15px;
     }
 
+    /* ---------- NAV ---------- */
     .side-nav {
-        display: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .side-nav a {
+        margin: 0;
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
+
+    /* ---------- HERO ---------- */
+    #lead {
+        padding: 120px 15px 60px;
+        min-height: auto;
+    }
+
+    #lead-content {
+        margin-top: 20px;
     }
 
     #lead-content h1 {
-        font-size: 2.5em;
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    #lead-content h2 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    /* ---------- HEADINGS ---------- */
+    .heading {
+        font-size: 1.75rem;
+        text-align: center;
+        display: block;
+    }
+
+    .heading:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* ---------- TIMELINE ---------- */
+    #experience-timeline:before {
+        display: none;
+    }
+
+    .vtimeline-content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* ---------- PROJECTS ---------- */
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    /* ---------- ABOUT ---------- */
+    #about .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ---------- SKILLS ---------- */
+    #skills {
+        padding: 40px 15px;
+    }
+
+    #skills .project-card {
+        margin-bottom: 20px;
+    }
+
+    #skills li {
+        display: inline-block;
+        margin: 4px;
+        font-size: 0.9rem;
+    }
+
+    /* ---------- CONTACT ---------- */
+    #contact h1 {
+        font-size: 1.8rem;
+    }
+
+    #contact h2 {
+        font-size: 1rem;
+        word-break: break-word;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        text-align: center;
     }
 }
