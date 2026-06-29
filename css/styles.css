@@ -116,18 +116,21 @@ header a:hover {
    HERO / LEAD
 ========================= */
 #lead {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px;
     position: relative;
     min-height: 60vh;
-    padding: 60px 15px;
-    background: url(../images/lead-bg.jpg) center/cover;
     overflow: hidden;
 }
 
-#lead-overlay {
+/* #lead-overlay {
     position: absolute;
     inset: 0;
     background: rgba(244,166,184,0.85);
-}
+} */
 
 #lead-content {
     position: relative;
