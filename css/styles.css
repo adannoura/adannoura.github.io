@@ -171,28 +171,67 @@ section {
 /* =========================
    EXPERIENCE TIMELINE
 ========================= */
+
 #experience-timeline {
-    max-width: 1000px;
-    margin: auto;
+    max-width: 900px;
+    margin: 0 auto;
     position: relative;
+    padding-left: 40px;
 }
 
-#experience-timeline:before {
-    content: '';
+#experience-timeline::before {
+    content: "";
     position: absolute;
-    left: 303px;
+    left: 12px;
     top: 0;
     bottom: 0;
     width: 3px;
     background: #F4A6B8;
 }
 
-.vtimeline-content {
-    margin-left: 350px;
-    background: #fff;
-    border: 1px solid #eee;
-    padding: 15px;
-    border-radius: 5px;
+#experience-timeline > div {
+    position: relative;
+    background: white;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #F7D6DD;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+#experience-timeline > div::before {
+    content: "";
+    position: absolute;
+    left: -34px;
+    top: 25px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #C86C8B;
+    border: 4px solid #FFFDF9;
+}
+
+#experience-timeline > div::after {
+    content: attr(data-date);
+    display: block;
+    color: #C86C8B;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+#experience-timeline h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+#experience-timeline h4 {
+    margin-top: 0;
+    color: #888;
+}
+
+#experience-timeline ul {
+    margin: 10px 0 0;
+    padding-left: 20px;
 }
 
 /* =========================
@@ -326,15 +365,22 @@ section {
         left: 50%;
         transform: translateX(-50%);
     }
-
+   
     /* ---------- TIMELINE ---------- */
-    #experience-timeline:before {
-        display: none;
+    #experience-timeline {
+        padding-left: 20px;
     }
 
-    .vtimeline-content {
-        margin-left: 0;
-        width: 100%;
+    #experience-timeline::before {
+        left: 5px;
+    }
+
+    #experience-timeline > div::before {
+        left: -23px;
+    }
+
+    #experience-timeline > div {
+        padding: 15px;
     }
 
     /* ---------- PROJECTS ---------- */
