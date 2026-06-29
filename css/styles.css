@@ -247,40 +247,29 @@ section {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    padding-left: 0;
 }
 
-/* each item becomes a structured row */
+/* each row */
 #experience-timeline > div {
     display: grid;
-    grid-template-columns: 180px 40px 1fr;
-    column-gap: 20px;
+    grid-template-columns: 200px 40px 1fr;
     align-items: start;
+    column-gap: 20px;
     margin-bottom: 30px;
     position: relative;
 }
 
-/* vertical line (perfectly centered in column 2) */
-#experience-timeline::before {
-    content: "";
-    position: absolute;
-    left: 180px;
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: #C86C8B;
-}
-
-/* date */
+/* DATE (left of line) */
 #experience-timeline > div::after {
     content: attr(data-date);
     grid-column: 1;
     text-align: right;
     font-weight: 700;
     color: #C86C8B;
+    padding-right: 10px;
 }
 
-/* dot */
+/* DOT (center column) */
 #experience-timeline > div::before {
     content: "";
     grid-column: 2;
@@ -291,11 +280,26 @@ section {
     border: 4px solid white;
     justify-self: center;
     margin-top: 4px;
+    z-index: 2;
 }
 
-/* content */
+/* EXPERIENCE CONTENT (right side) */
 #experience-timeline > div > * {
     grid-column: 3;
+}
+
+/* VERTICAL LINE (true center between date + content) */
+#experience-timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+
+    /* THIS is the real fix */
+    left: 220px; /* 200px date column + ~20px spacing */
+
+    width: 3px;
+    background: #C86C8B;
 }
 /* =========================
    PROJECT
@@ -465,7 +469,7 @@ section {
     }
    
     /* ---------- TIMELINE ---------- */
-    #experience-timeline > div {
+  #experience-timeline > div {
         grid-template-columns: 1fr;
     }
 
