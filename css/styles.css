@@ -243,66 +243,59 @@ section {
 /* =========================
    EXPERIENCE TIMELINE
 ========================= */
-
 #experience-timeline {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    padding-left: 140px;
 }
 
-/* Vertical line */
+/* each row becomes a grid */
+#experience-timeline > div {
+    display: grid;
+    grid-template-columns: 180px 40px 1fr;
+    align-items: start;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* date column (NO absolute positioning) */
+#experience-timeline > div::after {
+    content: attr(data-date);
+    grid-column: 1;
+    text-align: right;
+    font-weight: 700;
+    color: #C86C8B;
+    padding-right: 20px;
+}
+
+/* line column */
 #experience-timeline::before {
     content: "";
     position: absolute;
-    left: 110px;
+    left: 200px; /* aligns with middle column */
     top: 0;
     bottom: 0;
     width: 3px;
     background: #C86C8B;
 }
 
-/* Each job */
-#experience-timeline > div {
-    position: relative;
-    background: #FFFDF9;
-    margin-bottom: 30px;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 6px 15px rgba(0,0,0,.08);
-}
-
-/* Timeline circle */
+/* dot */
 #experience-timeline > div::before {
     content: "";
-    position: absolute;
-    left: -42px;
-    top: 25px;
-
+    grid-column: 2;
     width: 18px;
     height: 18px;
-
+    margin-top: 5px;
     border-radius: 50%;
     background: #C86C8B;
     border: 4px solid white;
+    justify-self: center;
 }
 
-/* Date on LEFT side of line */
-#experience-timeline > div::after {
-    content: attr(data-date);
-
-    position: absolute;
-    left: -260px;
-    top: 20px;
-
-    width: 200px;
-
-    text-align: right;
-
-    font-weight: 700;
-    color: #C86C8B;
+/* content */
+#experience-timeline > div > *:not(::before):not(::after) {
+    grid-column: 3;
 }
-
 /* =========================
    PROJECT
 ========================= */
@@ -471,25 +464,25 @@ section {
     }
    
     /* ---------- TIMELINE ---------- */
-    #experience-timeline {
-        padding-left: 30px;
+ @media (max-width: 768px) {
+    #experience-timeline > div {
+        grid-template-columns: 1fr;
     }
 
     #experience-timeline::before {
         left: 10px;
     }
 
-    #experience-timeline > div::before {
-        left: -33px;
+    #experience-timeline > div::after {
+        grid-column: 1;
+        text-align: left;
+        margin-bottom: 5px;
     }
 
-    #experience-timeline > div::after {
-        position: static;
-        display: block;
-        text-align: left;
-        width: auto;
-        margin-bottom: 10px;
+    #experience-timeline > div::before {
+        display: none;
     }
+}
     /* ---------- PROJECTS ---------- */
     .project-grid {
         grid-template-columns: 1fr;
