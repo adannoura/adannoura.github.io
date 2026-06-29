@@ -125,11 +125,11 @@ header a:hover {
     overflow: hidden;
 }
 
-/* #lead-overlay {
+#lead-overlay {
     position: absolute;
     inset: 0;
     background: rgba(244,166,184,0.85);
-} */
+}
 
 #lead-content {
     position: relative;
