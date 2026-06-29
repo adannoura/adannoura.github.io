@@ -18,7 +18,7 @@ html {
 
     box-shadow: 2px 0 10px rgba(0,0,0,0.1);
 
-    z-index: 9998;
+    z-index: 9999;
 }
 
 .side-nav a {
@@ -103,25 +103,27 @@ header {
     left: 0;
     right: 0;
 
-    z-index: 9999;
-
     display: flex;
     justify-content: center;
+    align-items: center;
 
     background: rgba(255, 253, 248, 0.95);
     backdrop-filter: blur(8px);
 
     padding: 10px 0;
+    z-index: 10000;
 }
+
 header ul {
-    display: inline-flex;
+    display: flex;
     gap: 15px;
 
     margin: 0;
     padding: 10px 15px;
 
-    background: transparent;
-    box-shadow: none;
+    width: fit-content;
+
+    border-radius: 12px;
 }
 
 header li{
@@ -718,14 +720,23 @@ footer{
     }
 }
 @media only screen and (max-width: 768px){
-    header{
-        position:fixed;
-        display:none;
-        z-index:999;
-        animation:none;
-        bottom:0;
-        height:100%
+    header {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+
+        top: 0;
+        left: 0;
+        right: 0;
+
+        height: auto;
+        bottom: auto;
     }
+
+    #menu {
+        width: 100%;
+    }
+}
     #mobile-menu-open,#mobile-menu-close{
         display:block
     }
@@ -824,6 +835,6 @@ h1, h2, h3 {
 
 body{
     padding-top: 70px;
-    padding-left: 70px;
+    padding-left: 110px;
     background:#FFFDF9;
 }
