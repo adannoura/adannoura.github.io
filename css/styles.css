@@ -586,6 +586,7 @@ footer{
     color:#374054
 }
 #education{
+   background: #FFFDF9;
     padding:50px 15px 20px 15px;
     border-bottom:1px solid #dcd9d9;
     text-align:center
@@ -673,6 +674,7 @@ footer{
     display:none
 }
 #skills{
+   background:#FFFDF9;
     padding:50px 15px;
     text-align:center
 }
