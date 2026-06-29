@@ -247,36 +247,37 @@ section {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
+    padding-left: 0;
 }
 
-/* each row becomes a grid */
+/* each item becomes a structured row */
 #experience-timeline > div {
     display: grid;
     grid-template-columns: 180px 40px 1fr;
+    column-gap: 20px;
     align-items: start;
     margin-bottom: 30px;
     position: relative;
 }
 
-/* date column (NO absolute positioning) */
+/* vertical line (perfectly centered in column 2) */
+#experience-timeline::before {
+    content: "";
+    position: absolute;
+    left: 180px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: #C86C8B;
+}
+
+/* date */
 #experience-timeline > div::after {
     content: attr(data-date);
     grid-column: 1;
     text-align: right;
     font-weight: 700;
     color: #C86C8B;
-    padding-right: 20px;
-}
-
-/* line column */
-#experience-timeline::before {
-    content: "";
-    position: absolute;
-    left: 200px; /* aligns with middle column */
-    top: 0;
-    bottom: 0;
-    width: 3px;
-    background: #C86C8B;
 }
 
 /* dot */
@@ -285,15 +286,15 @@ section {
     grid-column: 2;
     width: 18px;
     height: 18px;
-    margin-top: 5px;
     border-radius: 50%;
     background: #C86C8B;
     border: 4px solid white;
     justify-self: center;
+    margin-top: 4px;
 }
 
 /* content */
-#experience-timeline > div > *:not(::before):not(::after) {
+#experience-timeline > div > * {
     grid-column: 3;
 }
 /* =========================
@@ -464,7 +465,6 @@ section {
     }
    
     /* ---------- TIMELINE ---------- */
- @media (max-width: 768px) {
     #experience-timeline > div {
         grid-template-columns: 1fr;
     }
@@ -473,16 +473,15 @@ section {
         left: 10px;
     }
 
+    #experience-timeline > div::before {
+        display: none;
+    }
+
     #experience-timeline > div::after {
         grid-column: 1;
         text-align: left;
         margin-bottom: 5px;
     }
-
-    #experience-timeline > div::before {
-        display: none;
-    }
-}
     /* ---------- PROJECTS ---------- */
     .project-grid {
         grid-template-columns: 1fr;
