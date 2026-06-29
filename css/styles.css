@@ -97,27 +97,29 @@ body.active{overflow:hidden;z-index:-1}.no-js
         transform:translateY(0)
     }
 }
-header{
-    position: absolute;
+header {
+    position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: rgba(255, 253, 249, 0.95);
+    background: rgba(255, 253, 248, 0.95);
     backdrop-filter: blur(8px);
 
     padding: 10px 0;
 }
 header ul {
-    display: flex;
+    display: inline-flex;
     gap: 15px;
-    padding: 10px 20px;
-    margin: 0;
-    background: transparent; /* remove the floating box look */
-    box-shadow: none;
+    width: fit-content;   /* 👈 key fix */
+    margin: 0 auto;
+    padding: 10px 15px;
+    background: rgba(255, 253, 248, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 header li{
@@ -819,5 +821,7 @@ h1, h2, h3 {
 }
 
 body{
+    padding-top: 70px;
+    padding-left: 70px;
     background:#FFFDF9;
 }
