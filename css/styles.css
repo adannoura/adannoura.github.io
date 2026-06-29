@@ -1,3 +1,19 @@
+#about, #experience, #education, #projects, #skills, #contact {
+    scroll-margin-top: 80px;
+}
+.side-nav a.active,
+header a.active {
+    background: #FFF2D8;
+    color: #C86C8B;
+    border-radius: 8px;
+}
+header a, .side-nav a {
+    scroll-behavior: smooth;
+    transition: 0.2s ease;
+}
+section {
+    scroll-margin-top: 80px;
+}
 html {
     scroll-behavior: smooth;
 }
