@@ -116,7 +116,7 @@ section,
 /* =========================
    PROJECT CARDS
 ========================= */
-.projects-grid {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
@@ -124,7 +124,7 @@ section,
     margin: auto;
 }
 
-.project-card {
+.card {
     background: #FFFDFB;
     border: 1px solid #F6D7E5;
     border-radius: 12px;
@@ -135,7 +135,7 @@ section,
 /* =========================
    SKILLS LIST FIX
 ========================= */
-.project-card li {
+.pcard li {
     list-style: none;
     margin: 5px 0;
 }
@@ -188,26 +188,14 @@ h1, h2, h3 {
     background: #FFF2D8;
     color: #E88CA2;
 }
-.linkedin-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 24px;
-    border: 2px solid #ffffff;
-    border-radius: 8px;
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    border-radius: 30px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.15);
+.btn {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(200,108,139,0.4);
+  color: #C86C8B;
+}
 }
 
-.linkedin-btn:hover {
-    background: #ffffff;
-    color: #C86C8B;
-    text-decoration: none;
-}
 body{
     padding-top: 70px;   /* header */
     padding-left: 90px;  /* sidebar space */
