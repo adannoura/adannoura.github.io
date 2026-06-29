@@ -749,12 +749,17 @@ footer{
 }
 
 .project-card {
-    background:#FFFDF9;
-    border:1px solid #F7D6DD;
+    background: linear-gradient(
+        135deg,
+        #E8AFC7 0%,
+        #F7C8A5 50%,
+        #FFF1B8 100%
+    );
+    border: 1px solid rgba(255,255,255,0.4);
+    color: #5C4A5D;
+    border-radius: 12px;
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0,0,0,.1);
-    transition: transform .2s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
 }
 
 .project-card:hover {
