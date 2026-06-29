@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 .side-nav {
+    transition:.5s ease all
     position: fixed;
     top: 50%;
     left: 0;
