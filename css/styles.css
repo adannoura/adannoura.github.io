@@ -349,11 +349,31 @@ section {
 .btn {
     display: inline-block;
     padding: 12px 24px;
+
+    background: linear-gradient(
+        135deg,
+        #E8AFC7 0%,
+        #F7C8A5 50%,
+        #FFF1B8 100%
+    );
+
+    border: 2px solid rgba(255,255,255,.9);
+
     border-radius: 30px;
-    background: white;
-    color: #C86C8B;
+
+    color: #5C4A5D;
+    font-weight: 700;
     text-decoration: none;
-    font-weight: 600;
+
+    box-shadow:
+        0 6px 15px rgba(0,0,0,.08),
+        inset 0 1px 1px rgba(255,255,255,.6);
+
+    transition: all .25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.02);
 }
 
 /* =========================
