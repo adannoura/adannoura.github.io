@@ -119,12 +119,15 @@ body.active{overflow:hidden;z-index:-1}.no-js
     }
 }
 header {
-    position: relative; /* instead of fixed */
+    position: relative;   /* NOT fixed anymore */
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+
     background: rgba(255, 253, 248, 0.95);
     padding: 10px 0;
+
     z-index: 1;
 }
 
@@ -161,10 +164,7 @@ header a:focus{
 header.active{
     display:block
 }
-header.sticky{
-    position:fixed;
-    z-index:999
-}
+
 #menu.active{
     display:block
 }
@@ -284,24 +284,20 @@ footer{
 .background-alt{
     background:#FFF9F2;
 }
-#lead{
-    padding-top: 80px;
-    position:relative;
-    height:100vh;
-    min-height:500px;
-    max-height:1080px;
+#lead {
+    position: relative;
+    min-height: 60vh;   /* smaller hero */
+    height: auto;
+    padding: 60px 15px;
+
     background:url(../images/lead-bg.jpg);
     background-size:cover;
-    padding:15px;
-    overflow:hidden
+    overflow:hidden;
 }
-#lead-content{
-    position:absolute;
-    z-index:10;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    text-align:center
+#lead-content {
+    position: relative;
+    text-align: center;
+    margin-top: 40px;
 }
 #lead-content h1,
 #lead-content h2{
