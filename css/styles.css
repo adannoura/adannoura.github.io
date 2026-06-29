@@ -4,14 +4,28 @@
 html {
     scroll-behavior: smooth;
 }
+section,
+#about,
+#experience,
+#education,
+#project,
+#skills,
+#contact {
+    margin-bottom: 40px;
+}
 
 body {
     margin: 0;
     font-family: 'Lato', sans-serif;
     font-size: 16px;
-    background: #FFFDF9;
-    padding-left: 70px; /* space for top nav */
     color: #5C4A5D;
+
+    background: linear-gradient(
+        135deg,
+        #E8AFC7 0%,
+        #F7C8A5 50%,
+        #FFF1B8 100%
+    );
 }
 
 /* smooth scroll offset */
@@ -185,7 +199,16 @@ section {
 #project,
 #skills,
 #contact {
-    background: #FFFDF9;
+    background: rgba(255, 253, 249, 0.95);
+
+    margin: 40px auto;
+    padding: 40px;
+
+    max-width: 1200px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
 /* =========================
@@ -266,11 +289,15 @@ section {
 }
 
 .project-card {
-    background: linear-gradient(135deg, #E8AFC7, #F7C8A5, #FFF1B8);
+    background: #FFFDF9;
+
+    border: 1px solid #F6D7E5;
+
     border-radius: 12px;
+
     padding: 25px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    transition: transform 0.2s;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .project-card:hover {
