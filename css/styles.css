@@ -245,65 +245,62 @@ section {
 ========================= */
 
 #experience-timeline {
-    max-width: 900px;
-    margin: 0 auto;
     position: relative;
-    padding-left: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 140px;
 }
 
+/* Vertical line */
 #experience-timeline::before {
     content: "";
     position: absolute;
-    left: 12px;
+    left: 110px;
     top: 0;
     bottom: 0;
     width: 3px;
-    background: #F4A6B8;
+    background: #C86C8B;
 }
 
+/* Each job */
 #experience-timeline > div {
     position: relative;
-    background: white;
+    background: #FFFDF9;
     margin-bottom: 30px;
     padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #F7D6DD;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0,0,0,.08);
 }
 
+/* Timeline circle */
 #experience-timeline > div::before {
     content: "";
     position: absolute;
-    left: -34px;
+    left: -42px;
     top: 25px;
+
     width: 18px;
     height: 18px;
+
     border-radius: 50%;
     background: #C86C8B;
-    border: 4px solid #FFFDF9;
+    border: 4px solid white;
 }
 
+/* Date on LEFT side of line */
 #experience-timeline > div::after {
     content: attr(data-date);
-    display: block;
-    color: #C86C8B;
+
+    position: absolute;
+    left: -260px;
+    top: 20px;
+
+    width: 200px;
+
+    text-align: right;
+
     font-weight: 700;
-    margin-bottom: 10px;
-}
-
-#experience-timeline h3 {
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-#experience-timeline h4 {
-    margin-top: 0;
-    color: #888;
-}
-
-#experience-timeline ul {
-    margin: 10px 0 0;
-    padding-left: 20px;
+    color: #C86C8B;
 }
 
 /* =========================
@@ -475,21 +472,24 @@ section {
    
     /* ---------- TIMELINE ---------- */
     #experience-timeline {
-        padding-left: 20px;
+        padding-left: 30px;
     }
 
     #experience-timeline::before {
-        left: 5px;
+        left: 10px;
     }
 
     #experience-timeline > div::before {
-        left: -23px;
+        left: -33px;
     }
 
-    #experience-timeline > div {
-        padding: 15px;
+    #experience-timeline > div::after {
+        position: static;
+        display: block;
+        text-align: left;
+        width: auto;
+        margin-bottom: 10px;
     }
-
     /* ---------- PROJECTS ---------- */
     .project-grid {
         grid-template-columns: 1fr;
