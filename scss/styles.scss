@@ -33,35 +33,23 @@ section {
 /* =========================
    SIDE NAV
 ========================= */
-.side-nav {
+.side-nav {.side-nav {
   position: fixed;
-  top: 50%;
+  top: 0;
   left: 0;
-  transform: translateY(-50%);
+  right: 0;
+
+  transform: none;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
   background: rgba(255, 255, 255, 0.95);
-  padding: 12px 8px;
-  border-radius: 0 12px 12px 0;
+  padding: 12px 0;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   z-index: 1000;
-
-  a {
-    color: $primary;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 8px 10px;
-    margin: 4px 0;
-    border-radius: 8px;
-    display: block;
-    white-space: nowrap;
-
-    &:hover {
-      background: #FFF2D8;
-    }
-  }
 }
 
 /* =========================
