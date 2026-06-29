@@ -162,7 +162,7 @@ section {
 #about,
 #experience,
 #education,
-#projects,
+#project,
 #skills,
 #contact {
     background: #FFFDF9;
@@ -196,9 +196,9 @@ section {
 }
 
 /* =========================
-   PROJECTS
+   PROJECT
 ========================= */
-.projects-grid {
+.project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 25px;
